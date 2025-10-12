@@ -55,7 +55,7 @@ const PortfolioHero = () => {
             <div className="grid gap-4 px-6 py-6 text-sm text-muted-foreground sm:grid-cols-2">
               <a
                 href={`mailto:${profile.email}`}
-                className="group flex flex-col gap-1 rounded-2xl border border-accent/30 bg-accent/10 px-5 py-4 text-accent transition hover:border-accent/60 hover:bg-accent/20"
+                className="group flex w-full flex-col gap-1 rounded-2xl border border-accent/30 bg-accent/10 px-5 py-4 text-accent transition hover:border-accent/60 hover:bg-accent/20"
               >
                 <span className="text-xs uppercase tracking-[0.35em] text-accent/70">
                   email
