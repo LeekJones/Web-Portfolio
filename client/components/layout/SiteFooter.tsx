@@ -16,7 +16,7 @@ export const SiteFooter = () => {
   return (
     <footer className="border-t border-white/10 bg-background/90">
       <div className="mx-auto w-full max-w-6xl px-6 py-12">
-        <div className="rounded-3xl border border-white/10 bg-card/80 p-8 shadow-card backdrop-blur">
+        <div className="overflow-hidden rounded-3xl border border-white/10 bg-card/80 p-8 shadow-card backdrop-blur">
           <div className="flex items-center gap-3 border-b border-white/10 pb-4 text-xs uppercase tracking-[0.35em] text-muted-foreground">
             <span className="h-2 w-2 rounded-full bg-accent shadow-glow"></span>
             <span>// session summary</span>
