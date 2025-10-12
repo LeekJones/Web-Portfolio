@@ -26,6 +26,12 @@ export interface Certification {
   status: "Completed" | "In Progress";
 }
 
+export interface Metric {
+  value: string;
+  label: string;
+  description: string;
+}
+
 export interface Profile {
   name: string;
   role: string;
@@ -43,6 +49,7 @@ export interface Profile {
   experience: Experience[];
   projects: Project[];
   certifications: Certification[];
+  metrics: Metric[];
   availability: string;
 }
 
@@ -66,6 +73,26 @@ export const profile: Profile = {
     github: "https://github.com/TyleekJones",
   },
   availability: "Open to senior cloud engineering roles and site reliability consulting engagements.",
+  metrics: [
+    {
+      value: "40%",
+      label: "Deployment acceleration",
+      description:
+        "Efficiency gains delivered by modernizing Azure IoT Operations infrastructure-as-code program.",
+    },
+    {
+      value: "500+",
+      label: "Environments orchestrated",
+      description:
+        "Virtualized validation ecosystems supported for Intel Xeon server testing campaigns.",
+    },
+    {
+      value: "99.9%",
+      label: "Reliability maintained",
+      description:
+        "Availability sustained across telemetry and observability platforms through automation and SLO discipline.",
+    },
+  ],
   skills: [
     {
       title: "Programming & Automation",
