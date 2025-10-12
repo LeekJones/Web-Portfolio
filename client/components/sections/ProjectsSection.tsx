@@ -10,10 +10,10 @@ export const ProjectsSection = () => {
             <span className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-background/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.45em] text-muted-foreground">
               cat projects/README.md
             </span>
-            <h2 className="text-3xl font-semibold text-foreground sm:text-4xl">
+            <h2 className="text-balance text-3xl font-semibold text-foreground sm:text-4xl">
               Reference architectures and telemetry pipelines ready for reuse
             </h2>
-            <p className="text-base text-muted-foreground sm:text-lg">
+            <p className="text-balance text-base text-muted-foreground sm:text-lg">
               Each project combines automation, observability, and reliability to
               keep distributed systems accountable.
             </p>
