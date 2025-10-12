@@ -41,10 +41,10 @@ export const ContactSection = () => {
           </a>
           <a
             href={`tel:${phoneHref}`}
-            className="group flex flex-col items-center gap-2 rounded-2xl border border-white/15 bg-background/80 px-6 py-8 text-sm text-muted-foreground transition hover:border-primary/50 hover:text-primary"
+            className="group flex w-full flex-col items-center gap-2 rounded-2xl border border-white/15 bg-background/80 px-6 py-8 text-sm text-muted-foreground transition hover:border-primary/50 hover:text-primary"
           >
             <Phone className="h-6 w-6 text-primary transition-transform duration-300 group-hover:-translate-y-1" />
-            <span className="text-base font-semibold text-foreground">
+            <span className="break-words text-center text-base font-semibold text-foreground">
               {profile.phone}
             </span>
             <span className="inline-flex items-center gap-1 text-xs uppercase tracking-[0.35em]">
