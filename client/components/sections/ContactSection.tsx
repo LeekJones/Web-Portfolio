@@ -52,9 +52,9 @@ export const ContactSection = () => {
               <ArrowUpRight className="h-3 w-3" />
             </span>
           </a>
-          <div className="flex flex-col items-center gap-2 rounded-2xl border border-white/15 bg-background/80 px-6 py-8 text-sm text-muted-foreground">
+          <div className="flex w-full flex-col items-center gap-2 rounded-2xl border border-white/15 bg-background/80 px-6 py-8 text-sm text-muted-foreground">
             <MapPin className="h-6 w-6 text-primary" />
-            <span className="text-base font-semibold text-foreground">
+            <span className="break-words text-center text-base font-semibold text-foreground">
               {profile.location}
             </span>
             <span className="text-xs uppercase tracking-[0.35em]">
