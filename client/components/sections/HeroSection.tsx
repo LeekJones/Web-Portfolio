@@ -1,5 +1,4 @@
 import { profile } from "@/data/profile";
-import { profile } from "@/data/profile";
 import { ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
 
 const focusItems = profile.focusAreas;
