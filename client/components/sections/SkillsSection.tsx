@@ -30,7 +30,7 @@ export const SkillsSection = () => {
                 {category.items.map((skill) => (
                   <li key={skill} className="flex items-start gap-3">
                     <span className="mt-1 text-accent">-</span>
-                    <span className="text-muted-foreground/90">{skill}</span>
+                    <span className="break-words text-muted-foreground/90">{skill}</span>
                   </li>
                 ))}
               </ul>
