@@ -1,9 +1,10 @@
 import { profile } from "@/data/profile";
+import { profile } from "@/data/profile";
 import { ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
 
 const focusItems = profile.focusAreas;
 
-export const HeroSection = () => {
+const HeroSection = () => {
   const phoneHref = profile.phone.replace(/[^+\d]/g, "");
 
   return (
