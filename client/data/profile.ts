@@ -93,6 +93,12 @@ export const profile: Profile = {
       description:
         "Availability sustained across telemetry and observability platforms through automation and SLO discipline.",
     },
+    {
+      value: "30%",
+      label: "Operations automated",
+      description:
+        "Manual toil removed via DevOps scripting, pipelines, and incident response runbooks across Azure and multi-cloud estates.",
+    },
   ],
   skills: [
     {
