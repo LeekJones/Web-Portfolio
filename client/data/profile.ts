@@ -72,7 +72,8 @@ export const profile: Profile = {
     linkedin: "https://www.linkedin.com/in/tyleekjones",
     github: "https://github.com/TyleekJones",
   },
-  availability: "Open to senior cloud engineering roles and site reliability consulting engagements.",
+  availability:
+    "Open to DevOps, Cloud Engineering, and Site Reliability roles—including leadership or consulting engagements.",
   metrics: [
     {
       value: "40%",
