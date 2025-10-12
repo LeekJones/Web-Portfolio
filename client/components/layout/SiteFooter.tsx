@@ -11,6 +11,7 @@ const navigation = [
 
 export const SiteFooter = () => {
   const year = new Date().getFullYear();
+  const phoneHref = profile.phone.replace(/[^+\d]/g, "");
 
   return (
     <footer className="border-t border-white/10 bg-black/40 text-sm text-muted-foreground">
@@ -30,7 +31,7 @@ export const SiteFooter = () => {
             </span>
             <span className="inline-flex items-center gap-2">
               <Phone className="h-4 w-4" />
-              <a href={`tel:${profile.phone}`} className="transition hover:text-primary">
+              <a href={`tel:${phoneHref}`} className="transition hover:text-primary">
                 {profile.phone}
               </a>
             </span>
