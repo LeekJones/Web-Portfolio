@@ -43,11 +43,11 @@ export const SiteHeader = () => {
               <p className="text-lg font-semibold text-foreground">
                 {profile.name}
               </p>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-balance text-sm text-muted-foreground">
                 {profile.role}
               </p>
             </div>
-            <nav className="hidden items-center gap-5 text-sm text-muted-foreground md:flex">
+            <nav className="hidden flex-wrap items-center gap-4 gap-y-2 text-sm text-muted-foreground md:flex">
               {navigation.map((item) => (
                 <a
                   key={item.href}
