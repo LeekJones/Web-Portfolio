@@ -82,7 +82,7 @@ export const SkillsSection = () => {
                 {category.items.map((skill) => (
                   <span
                     key={skill}
-                    className="rounded-xl border border-white/10 bg-background/60 px-3 py-1 text-muted-foreground"
+                    className="rounded-xl border border-white/10 bg-background/60 px-3 py-1 text-muted-foreground shadow-sm shadow-primary/10"
                   >
                     {skill}
                   </span>
