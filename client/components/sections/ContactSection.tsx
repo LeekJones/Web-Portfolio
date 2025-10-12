@@ -28,10 +28,10 @@ export const ContactSection = () => {
         <div className="mx-auto grid w-full gap-6 sm:grid-cols-3">
           <a
             href={`mailto:${profile.email}`}
-            className="group flex flex-col items-center gap-2 rounded-2xl border border-accent/40 bg-accent/10 px-6 py-8 text-sm text-accent transition hover:border-accent/60 hover:bg-accent/20"
+            className="group flex w-full flex-col items-center gap-2 rounded-2xl border border-accent/40 bg-accent/10 px-6 py-8 text-sm text-accent transition hover:border-accent/60 hover:bg-accent/20"
           >
             <Mail className="h-6 w-6 text-accent transition-transform duration-300 group-hover:-translate-y-1" />
-            <span className="text-base font-semibold text-foreground">
+            <span className="break-words text-center text-base font-semibold text-foreground">
               {profile.email}
             </span>
             <span className="inline-flex items-center gap-1 text-xs uppercase tracking-[0.35em]">
