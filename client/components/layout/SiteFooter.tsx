@@ -98,7 +98,7 @@ export const SiteFooter = () => {
             </div>
           </div>
           <div className="mt-8 rounded-xl border border-white/10 bg-background/70 p-4 text-xs text-muted-foreground/80">
-            <p>
+            <p className="text-balance">
               {profile.availability}
             </p>
           </div>
