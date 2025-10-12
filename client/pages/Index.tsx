@@ -38,7 +38,7 @@ export default function Index() {
   return (
     <div className="space-y-24 pb-24">
       <PortfolioHero />
-      <section className="px-6">
+      <section className="px-6 py-20">
         <div className="mx-auto max-w-6xl space-y-6">
           <span className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-background/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.45em] text-muted-foreground">
             printf "core pillars"
