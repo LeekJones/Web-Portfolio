@@ -8,9 +8,9 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "1.5rem",
+      padding: "1.25rem",
       screens: {
-        "2xl": "1200px",
+        "2xl": "1100px",
       },
     },
     extend: {
@@ -50,9 +50,9 @@ export default {
         },
       },
       fontFamily: {
-        sans: ["Inter", ...defaultTheme.fontFamily.sans],
+        sans: ["JetBrains Mono", ...defaultTheme.fontFamily.mono],
         heading: ["Space Grotesk", ...defaultTheme.fontFamily.sans],
-        mono: ["IBM Plex Mono", ...defaultTheme.fontFamily.mono],
+        mono: ["JetBrains Mono", ...defaultTheme.fontFamily.mono],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -61,13 +61,13 @@ export default {
       },
       backgroundImage: {
         "grid-overlay":
-          "linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(180deg, rgba(255,255,255,0.04) 1px, transparent 1px)",
+          "linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px), linear-gradient(180deg, rgba(255,255,255,0.045) 1px, transparent 1px)",
         "radial-fade":
-          "radial-gradient(circle at top right, rgba(56,189,248,0.18), transparent 65%)",
+          "radial-gradient(circle at top right, rgba(134, 25, 143, 0.22), transparent 65%)",
       },
       boxShadow: {
-        glow: "0 20px 45px -20px rgba(56, 189, 248, 0.45)",
-        card: "0 24px 45px -30px rgba(15, 23, 42, 0.65)",
+        glow: "0 0 48px -12px rgba(192, 132, 252, 0.55)",
+        card: "0 28px 60px -30px rgba(15, 23, 42, 0.65)",
       },
       keyframes: {
         "accordion-down": {
@@ -86,15 +86,15 @@ export default {
             height: "0",
           },
         },
-        float: {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-12px)" },
+        caret: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        float: "float 6s ease-in-out infinite",
+        caret: "caret 1s steps(1) infinite",
       },
     },
   },
