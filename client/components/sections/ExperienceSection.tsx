@@ -33,11 +33,14 @@ export const ExperienceSection = () => {
                     <h3 className="text-xl font-semibold text-foreground">
                       {role.role}
                     </h3>
-                    <ul className="grid gap-3 text-sm text-muted-foreground/90">
+                    <ul className="grid gap-4 text-sm text-muted-foreground/90">
                       {role.achievements.map((achievement) => (
-                        <li key={achievement} className="flex gap-3">
-                          <span className="text-accent">➤</span>
-                          <span className="break-words">{achievement}</span>
+                        <li
+                          key={achievement}
+                          className="flex items-start gap-3 rounded-2xl border border-white/10 bg-background/70 p-4"
+                        >
+                          <span className="mt-1 text-accent">➤</span>
+                          <span className="break-words leading-relaxed">{achievement}</span>
                         </li>
                       ))}
                     </ul>
