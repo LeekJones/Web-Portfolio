@@ -171,7 +171,7 @@ const PortfolioHero = () => {
             <p className="text-xs uppercase tracking-[0.35em] text-accent/70">
               availability
             </p>
-            <p className="mt-3 text-base text-foreground">
+            <p className="mt-3 text-balance text-base text-foreground">
               {profile.availability}
             </p>
           </div>
