@@ -72,7 +72,7 @@ const PortfolioHero = () => {
                 href={profile.links.linkedin}
                 target="_blank"
                 rel="noreferrer"
-                className="group flex flex-col gap-1 rounded-2xl border border-white/15 bg-background/80 px-5 py-4 text-muted-foreground transition hover:border-primary/40 hover:text-primary"
+                className="group flex w-full flex-col gap-1 rounded-2xl border border-white/15 bg-background/80 px-5 py-4 text-muted-foreground transition hover:border-primary/40 hover:text-primary"
               >
                 <span className="text-xs uppercase tracking-[0.35em] text-muted-foreground/70">
                   linkedin
