@@ -167,7 +167,7 @@ const PortfolioHero = () => {
               ))}
             </div>
           </div>
-          <div className="rounded-3xl border border-accent/30 bg-accent/10 px-6 py-6 text-sm text-accent shadow-card">
+          <div className="overflow-hidden rounded-3xl border border-accent/30 bg-accent/10 px-6 py-6 text-sm text-accent shadow-card">
             <p className="text-xs uppercase tracking-[0.35em] text-accent/70">
               availability
             </p>
