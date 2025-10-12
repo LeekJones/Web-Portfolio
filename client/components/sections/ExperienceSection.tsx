@@ -37,7 +37,7 @@ export const ExperienceSection = () => {
                       {role.achievements.map((achievement) => (
                         <li key={achievement} className="flex gap-3">
                           <span className="text-accent">➤</span>
-                          <span>{achievement}</span>
+                          <span className="break-words">{achievement}</span>
                         </li>
                       ))}
                     </ul>
