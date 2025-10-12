@@ -1,5 +1,5 @@
 /** @import must precede all other statements */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -7,65 +7,65 @@
 
 @layer base {
   :root {
-    --background: 228 64% 7%;
-    --foreground: 210 40% 96%;
+    --background: 267 72% 6%;
+    --foreground: 270 35% 92%;
 
-    --card: 229 58% 11%;
-    --card-foreground: 210 52% 92%;
+    --card: 266 65% 10%;
+    --card-foreground: 270 35% 92%;
 
-    --popover: 229 58% 11%;
-    --popover-foreground: 210 52% 92%;
+    --popover: 266 65% 10%;
+    --popover-foreground: 270 35% 92%;
 
-    --primary: 191 97% 48%;
-    --primary-foreground: 222 47% 12%;
+    --primary: 280 92% 72%;
+    --primary-foreground: 267 72% 6%;
 
-    --secondary: 264 85% 58%;
-    --secondary-foreground: 210 36% 98%;
+    --secondary: 258 85% 64%;
+    --secondary-foreground: 269 42% 95%;
 
-    --muted: 229 38% 18%;
-    --muted-foreground: 214 28% 72%;
+    --muted: 268 45% 18%;
+    --muted-foreground: 269 34% 78%;
 
-    --accent: 34 100% 55%;
-    --accent-foreground: 210 48% 10%;
+    --accent: 146 84% 66%;
+    --accent-foreground: 267 72% 6%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 36% 98%;
+    --destructive: 353 84% 62%;
+    --destructive-foreground: 267 72% 6%;
 
-    --border: 227 38% 22%;
-    --input: 227 38% 24%;
-    --ring: 191 97% 48%;
+    --border: 266 53% 20%;
+    --input: 266 53% 24%;
+    --ring: 280 92% 72%;
 
-    --radius: 0.75rem;
+    --radius: 0.65rem;
   }
 
   .dark {
-    --background: 220 20% 94%;
-    --foreground: 222 40% 12%;
+    --background: 270 33% 95%;
+    --foreground: 266 70% 10%;
 
-    --card: 210 20% 98%;
-    --card-foreground: 222 40% 12%;
+    --card: 270 30% 100%;
+    --card-foreground: 266 70% 10%;
 
-    --popover: 210 20% 98%;
-    --popover-foreground: 222 40% 12%;
+    --popover: 270 30% 100%;
+    --popover-foreground: 266 70% 10%;
 
-    --primary: 191 97% 32%;
-    --primary-foreground: 210 60% 96%;
+    --primary: 276 100% 40%;
+    --primary-foreground: 270 33% 95%;
 
-    --secondary: 264 85% 38%;
-    --secondary-foreground: 210 60% 96%;
+    --secondary: 258 85% 48%;
+    --secondary-foreground: 270 33% 95%;
 
-    --muted: 210 24% 90%;
-    --muted-foreground: 224 32% 32%;
+    --muted: 268 28% 86%;
+    --muted-foreground: 267 45% 24%;
 
-    --accent: 32 98% 50%;
-    --accent-foreground: 222 47% 12%;
+    --accent: 146 74% 42%;
+    --accent-foreground: 270 33% 95%;
 
-    --destructive: 0 70% 42%;
-    --destructive-foreground: 210 60% 96%;
+    --destructive: 353 68% 42%;
+    --destructive-foreground: 270 33% 95%;
 
-    --border: 214 30% 86%;
-    --input: 214 30% 86%;
-    --ring: 191 97% 36%;
+    --border: 270 18% 78%;
+    --input: 270 18% 78%;
+    --ring: 276 100% 40%;
   }
 }
 
@@ -76,14 +76,14 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    background-image: radial-gradient(110% 140% at 90% 10%, hsla(191, 97%, 48%, 0.12), transparent 60%),
-      radial-gradient(140% 120% at 10% 90%, hsla(264, 85%, 58%, 0.14), transparent 65%),
-      linear-gradient(180deg, hsla(229, 58%, 11%, 0.92), hsla(228, 64%, 7%, 1));
+    background-image: radial-gradient(120% 140% at 15% 20%, hsla(280, 100%, 30%, 0.6), transparent 60%),
+      radial-gradient(110% 120% at 85% 0%, hsla(258, 85%, 35%, 0.55), transparent 55%),
+      linear-gradient(180deg, hsla(267, 72%, 6%, 1), hsla(268, 58%, 12%, 0.85));
     min-height: 100vh;
   }
 
   ::selection {
-    background: hsla(191, 97%, 48%, 0.35);
+    background: hsla(146, 84%, 66%, 0.35);
     color: hsl(var(--foreground));
   }
 
