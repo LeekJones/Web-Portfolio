@@ -1,8 +1,8 @@
-import HeroSection from "@/components/sections/HeroSection";
+import PortfolioHero from "@/components/sections/HeroSection";
 import CertificationsSection from "@/components/sections/CertificationsSection";
 import ContactSection from "@/components/sections/ContactSection";
 import ExperienceSection from "@/components/sections/ExperienceSection";
-import HeroSection from "@/components/sections/HeroSection";
+import PortfolioHero from "@/components/sections/HeroSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
 import SkillsSection from "@/components/sections/SkillsSection";
 import { profile } from "@/data/profile";
@@ -38,7 +38,7 @@ const pillars = [
 export default function Index() {
   return (
     <div className="space-y-24 pb-24">
-      <HeroSection />
+      <PortfolioHero />
       <section className="px-6">
         <div className="mx-auto max-w-6xl space-y-6">
           <span className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-background/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.45em] text-muted-foreground">
