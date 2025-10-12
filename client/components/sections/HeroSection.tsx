@@ -100,7 +100,7 @@ const PortfolioHero = () => {
                   <ArrowUpRight className="h-3 w-3" />
                 </span>
               </a>
-              <div className="flex flex-col gap-1 rounded-2xl border border-white/15 bg-background/80 px-5 py-4 text-muted-foreground">
+              <div className="flex w-full flex-col gap-1 rounded-2xl border border-white/15 bg-background/80 px-5 py-4 text-muted-foreground">
                 <span className="text-xs uppercase tracking-[0.35em] text-muted-foreground/70">
                   location
                 </span>
