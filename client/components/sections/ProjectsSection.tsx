@@ -42,14 +42,14 @@ export const ProjectsSection = () => {
                 </span>
               </div>
               <div className="flex flex-1 flex-col gap-6 px-6 py-6">
-                <p className="text-sm text-muted-foreground/90">
+                <p className="break-words text-sm text-muted-foreground/90">
                   {project.description}
                 </p>
                 <ul className="grid gap-2 text-sm text-muted-foreground">
                   {project.highlights.map((highlight) => (
                     <li key={highlight} className="flex items-start gap-3">
                       <span className="text-accent">▹</span>
-                      {highlight}
+                      <span className="break-words">{highlight}</span>
                     </li>
                   ))}
                 </ul>
