@@ -60,7 +60,7 @@ const PortfolioHero = () => {
                 <span className="text-xs uppercase tracking-[0.35em] text-accent/70">
                   email
                 </span>
-                <span className="text-base font-semibold text-foreground">
+                <span className="break-words text-base font-semibold text-foreground">
                   {profile.email}
                 </span>
                 <span className="inline-flex items-center gap-1 text-xs">
