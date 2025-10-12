@@ -1,12 +1,12 @@
 import { profile } from "@/data/profile";
-import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const navigation = [
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Experience", href: "#experience" },
-  { label: "Projects", href: "#projects" },
-  { label: "Contact", href: "#contact" },
+  { label: "about", href: "#about" },
+  { label: "skills", href: "#skills" },
+  { label: "experience", href: "#experience" },
+  { label: "projects", href: "#projects" },
+  { label: "contact", href: "#contact" },
 ];
 
 export const SiteFooter = () => {
@@ -14,90 +14,100 @@ export const SiteFooter = () => {
   const phoneHref = profile.phone.replace(/[^+\d]/g, "");
 
   return (
-    <footer className="border-t border-white/10 bg-black/40 text-sm text-muted-foreground">
-      <div className="mx-auto grid w-full max-w-6xl gap-10 px-6 py-12 md:grid-cols-[1.4fr,1fr,1fr]">
-        <div className="space-y-4">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs uppercase tracking-[0.35em] text-muted-foreground/80">
-            {profile.role}
-          </span>
-          <h3 className="text-2xl font-semibold text-foreground">{profile.name}</h3>
-          <p className="max-w-md text-muted-foreground">
-            {profile.summary}
-          </p>
-          <div className="flex flex-wrap items-center gap-4 text-foreground/70">
-            <span className="inline-flex items-center gap-2">
-              <MapPin className="h-4 w-4" />
-              {profile.location}
-            </span>
-            <span className="inline-flex items-center gap-2">
-              <Phone className="h-4 w-4" />
-              <a href={`tel:${phoneHref}`} className="transition hover:text-primary">
-                {profile.phone}
-              </a>
-            </span>
+    <footer className="border-t border-white/10 bg-background/90">
+      <div className="mx-auto w-full max-w-6xl px-6 py-12">
+        <div className="rounded-3xl border border-white/10 bg-card/80 p-8 shadow-card backdrop-blur">
+          <div className="flex items-center gap-3 border-b border-white/10 pb-4 text-xs uppercase tracking-[0.35em] text-muted-foreground">
+            <span className="h-2 w-2 rounded-full bg-accent shadow-glow"></span>
+            <span>// session summary</span>
           </div>
-        </div>
-        <div className="space-y-4">
-          <h4 className="text-base font-semibold text-foreground">Navigate</h4>
-          <ul className="grid gap-2">
-            {navigation.map((item) => (
-              <li key={item.label}>
-                <a
-                  href={item.href}
-                  className="transition hover:text-primary"
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-          <span className="block text-xs text-muted-foreground">
-            {profile.availability}
-          </span>
-        </div>
-        <div className="space-y-4">
-          <h4 className="text-base font-semibold text-foreground">Connect</h4>
-          <ul className="grid gap-3">
-            <li>
-              <a
-                href={`mailto:${profile.email}`}
-                className="inline-flex items-center gap-3 rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-foreground transition hover:border-primary/50 hover:text-primary"
-              >
-                <Mail className="h-4 w-4" />
-                {profile.email}
-              </a>
-            </li>
-            <li>
-              <a
-                href={profile.links.linkedin}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-3 rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-foreground transition hover:border-primary/50 hover:text-primary"
-              >
-                <Linkedin className="h-4 w-4" />
-                LinkedIn
-              </a>
-            </li>
-            <li>
+          <div className="grid gap-8 pt-6 md:grid-cols-[1.4fr,1fr,1fr]">
+            <div className="space-y-4">
+              <p className="text-sm text-accent">{profile.name}@{profile.location}</p>
+              <p className="text-base text-muted-foreground/90">
+                {profile.summary}
+              </p>
+              <div className="space-y-2 text-sm text-muted-foreground">
+                <div>
+                  <span className="text-accent/80">email</span>: {" "}
+                  <a
+                    href={`mailto:${profile.email}`}
+                    className="text-foreground transition hover:text-accent"
+                  >
+                    {profile.email}
+                  </a>
+                </div>
+                <div>
+                  <span className="text-accent/80">phone</span>: {" "}
+                  <a
+                    href={`tel:${phoneHref}`}
+                    className="text-foreground transition hover:text-accent"
+                  >
+                    {profile.phone}
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div>
+              <p className="text-xs uppercase tracking-[0.35em] text-muted-foreground">
+                navigation
+              </p>
+              <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+                {navigation.map((item) => (
+                  <li key={item.label}>
+                    <a
+                      href={item.href}
+                      className="inline-flex items-center gap-2 rounded-lg border border-transparent px-2 py-1 transition hover:border-primary/40 hover:text-primary"
+                    >
+                      <span className="text-accent/80">→</span>
+                      {item.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="space-y-3 text-sm text-muted-foreground">
+              <p className="text-xs uppercase tracking-[0.35em] text-muted-foreground">
+                connect
+              </p>
               <a
                 href={profile.links.github}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-3 rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-foreground transition hover:border-primary/50 hover:text-primary"
+                className="flex items-center gap-3 rounded-lg border border-white/10 bg-background/80 px-3 py-2 transition hover:border-primary/50 hover:text-primary"
               >
                 <Github className="h-4 w-4" />
-                GitHub
+                github
               </a>
-            </li>
-          </ul>
+              <a
+                href={profile.links.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-3 rounded-lg border border-white/10 bg-background/80 px-3 py-2 transition hover:border-primary/50 hover:text-primary"
+              >
+                <Linkedin className="h-4 w-4" />
+                linkedin
+              </a>
+              <a
+                href={`mailto:${profile.email}`}
+                className="flex items-center gap-3 rounded-lg border border-accent/40 bg-accent/15 px-3 py-2 text-accent transition hover:border-accent/60 hover:bg-accent/25"
+              >
+                <Mail className="h-4 w-4" />
+                request a call
+              </a>
+            </div>
+          </div>
+          <div className="mt-8 rounded-xl border border-white/10 bg-background/70 p-4 text-xs text-muted-foreground/80">
+            <p>
+              {profile.availability}
+            </p>
+          </div>
         </div>
       </div>
-      <div className="border-t border-white/10 bg-black/30">
-        <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-6 py-6 text-xs text-muted-foreground md:flex-row md:items-center md:justify-between">
-          <span>© {year} {profile.name}. All rights reserved.</span>
-          <span className="text-muted-foreground/70">
-            Crafted for impactful edge-to-cloud and observability initiatives.
-          </span>
+      <div className="border-t border-white/10 bg-background/95">
+        <div className="mx-auto flex w-full max-w-6xl flex-col gap-2 px-6 py-6 text-xs text-muted-foreground md:flex-row md:items-center md:justify-between">
+          <span>© {year} {profile.name}. uptime >= 99.9%</span>
+          <span>crafted in purple terminal mode</span>
         </div>
       </div>
     </footer>
