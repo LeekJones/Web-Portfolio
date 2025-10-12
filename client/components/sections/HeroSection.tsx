@@ -9,8 +9,8 @@ const PortfolioHero = () => {
   return (
     <section id="about" className="relative overflow-hidden pb-24 pt-28 sm:pt-32">
       <div className="mx-auto grid w-full max-w-6xl gap-12 px-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-start">
-        <div className="space-y-6">
-          <div className="rounded-3xl border border-white/10 bg-background/75 shadow-card backdrop-blur">
+        <div className="space-y-8">
+          <div className="overflow-hidden rounded-3xl border border-white/10 bg-background/75 shadow-card backdrop-blur">
             <div className="flex items-center justify-between gap-3 border-b border-white/10 px-6 py-4 text-xs uppercase tracking-[0.35em] text-muted-foreground">
               <span className="flex items-center gap-2">
                 <span className="flex gap-1">
