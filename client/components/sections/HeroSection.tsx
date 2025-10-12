@@ -4,7 +4,7 @@ import { ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
 
 const focusItems = profile.focusAreas;
 
-const HeroSection = () => {
+const PortfolioHero = () => {
   const phoneHref = profile.phone.replace(/[^+\d]/g, "");
 
   return (
@@ -182,4 +182,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default PortfolioHero;
