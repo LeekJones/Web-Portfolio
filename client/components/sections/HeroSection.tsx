@@ -30,11 +30,11 @@ const PortfolioHero = () => {
                 {profile.name}
               </p>
               <p className="text-accent">$ echo \"{profile.role}\"</p>
-              <p className="pl-6 text-secondary">
+              <p className="pl-6 text-balance text-secondary">
                 {profile.headline}
               </p>
               <p className="text-accent">$ cat summary.txt</p>
-              <p className="pl-6 text-base text-muted-foreground/90">
+              <p className="pl-6 max-w-prose text-balance text-base text-muted-foreground/90">
                 {profile.summary}
               </p>
               <p className="text-accent"># focus-areas</p>
