@@ -24,7 +24,7 @@ export const SiteFooter = () => {
           <div className="grid gap-8 pt-6 md:grid-cols-[1.4fr,1fr,1fr]">
             <div className="space-y-4">
               <p className="text-sm text-accent">{profile.name}@{profile.location}</p>
-              <p className="text-base text-muted-foreground/90">
+              <p className="text-balance text-base text-muted-foreground/90">
                 {profile.summary}
               </p>
               <div className="space-y-2 text-sm text-muted-foreground">
