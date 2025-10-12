@@ -114,7 +114,7 @@ const PortfolioHero = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
+          <div className="flex flex-wrap items-center gap-3 gap-y-3 text-xs text-muted-foreground">
             <a
               href={profile.links.github}
               target="_blank"
