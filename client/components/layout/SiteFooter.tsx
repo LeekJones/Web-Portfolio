@@ -41,7 +41,7 @@ export const SiteFooter = () => {
                   <span className="text-accent/80">phone</span>: {" "}
                   <a
                     href={`tel:${phoneHref}`}
-                    className="text-foreground transition hover:text-accent"
+                    className="break-words text-foreground transition hover:text-accent"
                   >
                     {profile.phone}
                   </a>
