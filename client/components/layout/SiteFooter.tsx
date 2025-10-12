@@ -1,4 +1,5 @@
 import { profile } from "@/data/profile";
+import { profile } from "@/data/profile";
 import { Github, Linkedin, Mail } from "lucide-react";
 
 const navigation = [
@@ -106,7 +107,7 @@ export const SiteFooter = () => {
       </div>
       <div className="border-t border-white/10 bg-background/95">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-2 px-6 py-6 text-xs text-muted-foreground md:flex-row md:items-center md:justify-between">
-          <span>© {year} {profile.name}. uptime >= 99.9%</span>
+          <span>© {year} {profile.name}. uptime &gt;= 99.9%</span>
           <span>crafted in purple terminal mode</span>
         </div>
       </div>
