@@ -16,10 +16,10 @@ export const ContactSection = () => {
           sudo connect --target cloud
         </span>
         <div className="space-y-6">
-          <h2 className="mx-auto max-w-3xl text-4xl font-semibold text-foreground sm:text-5xl">
+          <h2 className="mx-auto max-w-3xl text-balance text-4xl font-semibold text-foreground sm:text-5xl">
             Initiate the next cloud or observability mission
           </h2>
-          <p className="mx-auto max-w-2xl text-base text-muted-foreground sm:text-lg">
+          <p className="mx-auto max-w-2xl text-balance text-base text-muted-foreground sm:text-lg">
             Drop a command and I will respond with architecture insight, delivery
             ops planning, and the telemetry you need to trust rollout after
             rollout.
