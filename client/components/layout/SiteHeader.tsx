@@ -3,115 +3,119 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const navigation = [
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Experience", href: "#experience" },
-  { label: "Projects", href: "#projects" },
-  { label: "Contact", href: "#contact" },
-];
-
-const socialLinks = [
-  { label: "LinkedIn", href: profile.links.linkedin },
-  { label: "GitHub", href: profile.links.github },
+  { label: "about", href: "#about", command: "cat about.md" },
+  { label: "skills", href: "#skills", command: "ls skills/" },
+  { label: "experience", href: "#experience", command: "tail -f experience.log" },
+  { label: "projects", href: "#projects", command: "git log --projects" },
+  { label: "contact", href: "#contact", command: "ssh connect" },
 ];
 
 export const SiteHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const prompt = "tyleek@portfolio";
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-background/75 backdrop-blur-xl">
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-6 px-6 py-5">
-        <a
-          href="/"
-          className="group relative flex items-center gap-3 text-base font-semibold text-foreground"
-        >
-          <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-primary/80 via-secondary/60 to-primary/35 text-lg font-bold text-background shadow-glow transition-transform duration-500 group-hover:scale-105">
-            TJ
-          </span>
-          <span className="flex flex-col">
-            <span className="text-sm uppercase tracking-[0.45em] text-muted-foreground">
-              {profile.role}
-            </span>
-            <span className="text-lg font-semibold tracking-tight text-foreground transition-colors group-hover:text-primary">
-              {profile.name}
-            </span>
-          </span>
-        </a>
-        <nav className="hidden items-center gap-1 rounded-full border border-white/10 bg-white/5 px-2 py-1 text-sm font-medium text-foreground/90 shadow-card md:flex">
-          {navigation.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className="rounded-full px-4 py-2 text-sm transition-colors duration-200 hover:bg-white/10"
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-background/70 backdrop-blur-xl">
+      <div className="mx-auto w-full max-w-6xl px-6 py-4">
+        <div className="rounded-2xl border border-white/10 bg-card/80 shadow-card backdrop-blur">
+          <div className="flex items-center justify-between gap-4 border-b border-white/10 px-5 py-3">
+            <div className="flex items-center gap-3 text-xs uppercase tracking-[0.45em] text-muted-foreground">
+              <span className="flex gap-1">
+                <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f56] shadow-glow" />
+                <span className="h-2.5 w-2.5 rounded-full bg-[#ffbd2e] shadow-glow" />
+                <span className="h-2.5 w-2.5 rounded-full bg-[#27c93f] shadow-glow" />
+              </span>
+              <span className="font-semibold">terminal</span>
+            </div>
+            <button
+              type="button"
+              className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-background/90 text-muted-foreground transition hover:text-primary md:hidden"
+              onClick={() => setIsOpen((prev) => !prev)}
+              aria-label="Toggle navigation"
+              aria-expanded={isOpen}
             >
-              {item.label}
-            </a>
-          ))}
-        </nav>
-        <div className="hidden items-center gap-3 md:flex">
-          <a
-            href={`mailto:${profile.email}`}
-            className="rounded-full border border-primary/30 bg-primary/20 px-4 py-2 text-sm font-semibold text-primary-foreground/90 shadow-glow transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/60 hover:bg-primary/30"
+              {isOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+            </button>
+          </div>
+          <div className="flex items-center justify-between gap-6 px-5 py-4">
+            <div className="space-y-1">
+              <p className="text-xs text-accent">{prompt}:{"~"}$</p>
+              <p className="text-lg font-semibold text-foreground">
+                {profile.name}
+              </p>
+              <p className="text-sm text-muted-foreground">
+                {profile.role}
+              </p>
+            </div>
+            <nav className="hidden items-center gap-5 text-sm text-muted-foreground md:flex">
+              {navigation.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="group inline-flex flex-col items-start gap-1 rounded-lg border border-transparent px-3 py-2 font-medium transition hover:border-primary/40 hover:text-primary"
+                >
+                  <span>{item.label}</span>
+                  <code className="rounded bg-background/80 px-1.5 py-0.5 text-xs text-accent">
+                    {item.command}
+                  </code>
+                </a>
+              ))}
+            </nav>
+            <div className="hidden items-center gap-3 text-xs md:flex">
+              <a
+                href={profile.links.github}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-lg border border-white/15 bg-background/80 px-3 py-2 font-medium text-muted-foreground transition hover:border-primary/40 hover:text-primary"
+              >
+                github
+              </a>
+              <a
+                href={profile.links.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-lg border border-white/15 bg-background/80 px-3 py-2 font-medium text-muted-foreground transition hover:border-primary/40 hover:text-primary"
+              >
+                linkedin
+              </a>
+              <a
+                href={`mailto:${profile.email}`}
+                className="rounded-lg border border-accent/40 bg-accent/20 px-3 py-2 font-medium text-accent transition hover:border-accent/70 hover:bg-accent/30"
+              >
+                connect
+              </a>
+            </div>
+          </div>
+          <div
+            className={`md:hidden ${
+              isOpen ? "max-h-96 border-t border-white/10" : "max-h-0"
+            } overflow-hidden transition-[max-height] duration-300`}
           >
-            Let&apos;s Connect
-          </a>
-          {socialLinks.map((social) => (
-            <a
-              key={social.label}
-              href={social.href}
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full border border-white/10 px-4 py-2 text-sm text-muted-foreground transition hover:border-primary/50 hover:text-primary"
-            >
-              {social.label}
-            </a>
-          ))}
+            <nav className="flex flex-col gap-2 px-5 py-4 text-sm text-muted-foreground">
+              {navigation.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className="rounded-lg border border-white/10 bg-background/80 px-4 py-3 transition hover:border-primary/40 hover:text-primary"
+                >
+                  <div className="text-foreground">{item.label}</div>
+                  <code className="mt-1 block text-xs text-accent">
+                    {item.command}
+                  </code>
+                </a>
+              ))}
+              <a
+                href={`mailto:${profile.email}`}
+                onClick={() => setIsOpen(false)}
+                className="rounded-lg border border-accent/40 bg-accent/20 px-4 py-3 text-accent transition hover:border-accent/60 hover:bg-accent/25"
+              >
+                connect
+              </a>
+            </nav>
+          </div>
         </div>
-        <button
-          type="button"
-          className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-foreground md:hidden"
-          onClick={() => setIsOpen((prev) => !prev)}
-          aria-expanded={isOpen}
-          aria-label="Toggle Navigation"
-        >
-          {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
       </div>
-      <nav
-        className={`md:hidden ${
-          isOpen ? "visible max-h-96 opacity-100" : "invisible max-h-0 opacity-0"
-        } flex flex-col gap-3 border-t border-white/10 bg-black/60 px-6 py-4 text-sm font-semibold text-muted-foreground transition-all duration-300`}
-      >
-        {navigation.map((item) => (
-          <a
-            key={item.label}
-            href={item.href}
-            onClick={() => setIsOpen(false)}
-            className="rounded-lg px-4 py-3 text-foreground transition hover:bg-white/10"
-          >
-            {item.label}
-          </a>
-        ))}
-        <a
-          href={`mailto:${profile.email}`}
-          onClick={() => setIsOpen(false)}
-          className="rounded-lg border border-primary/50 bg-primary/20 px-4 py-3 text-primary-foreground transition hover:bg-primary/30"
-        >
-          Let&apos;s Connect
-        </a>
-        {socialLinks.map((social) => (
-          <a
-            key={social.label}
-            href={social.href}
-            target="_blank"
-            rel="noreferrer"
-            onClick={() => setIsOpen(false)}
-            className="rounded-lg border border-white/10 px-4 py-3 text-muted-foreground transition hover:border-primary/50 hover:text-primary"
-          >
-            {social.label}
-          </a>
-        ))}
-      </nav>
     </header>
   );
 };
