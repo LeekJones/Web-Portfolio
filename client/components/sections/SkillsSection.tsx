@@ -2,7 +2,7 @@ import { profile } from "@/data/profile";
 
 export const SkillsSection = () => {
   return (
-    <section id="skills" className="border-t border-white/5 bg-white/3 py-24 backdrop-blur-sm">
+    <section id="skills" className="border-t border-white/5 bg-white/5 py-24 backdrop-blur-sm">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-14 px-6">
         <div className="max-w-2xl space-y-4">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.45em] text-muted-foreground/80">
