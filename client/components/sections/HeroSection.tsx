@@ -77,7 +77,7 @@ const PortfolioHero = () => {
                 <span className="text-xs uppercase tracking-[0.35em] text-muted-foreground/70">
                   linkedin
                 </span>
-                <span className="text-base font-semibold text-foreground">
+                <span className="break-words text-base font-semibold text-foreground">
                   {profile.links.linkedin.replace("https://", "")}
                 </span>
                 <span className="inline-flex items-center gap-1 text-xs">
