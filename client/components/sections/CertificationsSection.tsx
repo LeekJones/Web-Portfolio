@@ -25,7 +25,7 @@ export const CertificationsSection = () => {
             >
               <BadgeCheck className="h-5 w-5 text-accent" />
               <div>
-                <p className="font-semibold text-foreground">{cert.title}</p>
+                <p className="break-words font-semibold text-foreground">{cert.title}</p>
                 <span className="text-xs uppercase tracking-[0.35em] text-muted-foreground/70">
                   {cert.status}
                 </span>
