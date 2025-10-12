@@ -1,5 +1,4 @@
 import { profile } from "@/data/profile";
-import { profile } from "@/data/profile";
 import { Github, Linkedin, Mail } from "lucide-react";
 
 const navigation = [
