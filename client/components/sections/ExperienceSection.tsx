@@ -18,12 +18,12 @@ export const ExperienceSection = () => {
           </p>
         </div>
 
-        <ol className="relative space-y-12 border-l border-white/10 pl-10">
-          <span className="absolute left-0 top-0 -translate-x-[9px] h-4 w-4 rounded-full border border-accent bg-background" />
+        <ol className="relative space-y-12 border-l border-white/10 pl-16">
+          <span className="absolute left-0 top-0 h-4 w-4 -translate-x-1/2 rounded-full border border-accent bg-background" />
           {profile.experience.map((role) => (
             <li key={`${role.company}-${role.start}`} className="relative">
-              <span className="absolute -left-[9px] top-3 h-4 w-4 rounded-full border-2 border-accent bg-background" />
-              <article className="overflow-hidden rounded-3xl border border-white/10 bg-[#1b0f2b]/80 shadow-card backdrop-blur">
+              <span className="absolute left-0 top-6 h-4 w-4 -translate-x-1/2 rounded-full border-2 border-accent bg-background" />
+              <article className="ml-4 overflow-hidden rounded-3xl border border-white/10 bg-[#1b0f2b]/80 shadow-card backdrop-blur">
                 <div className="flex items-center justify-between gap-3 border-b border-white/10 px-6 py-4 text-xs uppercase tracking-[0.35em] text-muted-foreground">
                   <span>{role.company.toLowerCase()}</span>
                   <span className="text-accent/70">{role.role.toLowerCase()}</span>
