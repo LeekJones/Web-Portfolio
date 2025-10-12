@@ -32,7 +32,7 @@ export const SiteFooter = () => {
                   <span className="text-accent/80">email</span>: {" "}
                   <a
                     href={`mailto:${profile.email}`}
-                    className="text-foreground transition hover:text-accent"
+                    className="break-words text-foreground transition hover:text-accent"
                   >
                     {profile.email}
                   </a>
