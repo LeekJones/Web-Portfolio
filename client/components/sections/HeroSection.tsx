@@ -142,8 +142,8 @@ const PortfolioHero = () => {
             </a>
           </div>
         </div>
-        <div className="space-y-6">
-          <div className="rounded-3xl border border-white/10 bg-background/75 shadow-card backdrop-blur">
+        <div className="space-y-8">
+          <div className="overflow-hidden rounded-3xl border border-white/10 bg-background/75 shadow-card backdrop-blur">
             <div className="flex items-center justify-between gap-3 border-b border-white/10 px-6 py-4 text-xs uppercase tracking-[0.35em] text-muted-foreground">
               <span>metrics.json</span>
               <span className="text-accent/70">READONLY</span>
