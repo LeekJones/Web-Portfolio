@@ -1,5 +1,6 @@
+import { profile } from "@/data/profile";
 import { Menu, X } from "lucide-react";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 
 const navigation = [
   { label: "About", href: "#about" },
@@ -9,9 +10,13 @@ const navigation = [
   { label: "Contact", href: "#contact" },
 ];
 
+const socialLinks = [
+  { label: "LinkedIn", href: profile.links.linkedin },
+  { label: "GitHub", href: profile.links.github },
+];
+
 export const SiteHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navItems = useMemo(() => navigation, []);
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-background/75 backdrop-blur-xl">
@@ -20,20 +25,20 @@ export const SiteHeader = () => {
           href="/"
           className="group relative flex items-center gap-3 text-base font-semibold text-foreground"
         >
-          <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-primary/80 via-secondary/60 to-primary/40 text-lg font-bold text-background shadow-glow transition-transform duration-500 group-hover:scale-105">
+          <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-primary/80 via-secondary/60 to-primary/35 text-lg font-bold text-background shadow-glow transition-transform duration-500 group-hover:scale-105">
             TJ
           </span>
           <span className="flex flex-col">
             <span className="text-sm uppercase tracking-[0.45em] text-muted-foreground">
-              Cloud Engineer
+              {profile.role}
             </span>
-            <span className="text-lg font-semibold tracking-tight text-foreground group-hover:text-primary transition-colors">
-              Tyleek Jones
+            <span className="text-lg font-semibold tracking-tight text-foreground transition-colors group-hover:text-primary">
+              {profile.name}
             </span>
           </span>
         </a>
         <nav className="hidden items-center gap-1 rounded-full border border-white/10 bg-white/5 px-2 py-1 text-sm font-medium text-foreground/90 shadow-card md:flex">
-          {navItems.map((item) => (
+          {navigation.map((item) => (
             <a
               key={item.label}
               href={item.href}
@@ -43,21 +48,24 @@ export const SiteHeader = () => {
             </a>
           ))}
         </nav>
-        <div className="hidden items-center gap-4 md:flex">
+        <div className="hidden items-center gap-3 md:flex">
           <a
-            href="mailto:Tyleek.Jones.Dev@gmail.com"
+            href={`mailto:${profile.email}`}
             className="rounded-full border border-primary/30 bg-primary/20 px-4 py-2 text-sm font-semibold text-primary-foreground/90 shadow-glow transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/60 hover:bg-primary/30"
           >
             Let&apos;s Connect
           </a>
-          <a
-            href="https://www.linkedin.com"
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-full border border-white/10 px-4 py-2 text-sm text-muted-foreground transition hover:border-primary/50 hover:text-primary"
-          >
-            LinkedIn
-          </a>
+          {socialLinks.map((social) => (
+            <a
+              key={social.label}
+              href={social.href}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full border border-white/10 px-4 py-2 text-sm text-muted-foreground transition hover:border-primary/50 hover:text-primary"
+            >
+              {social.label}
+            </a>
+          ))}
         </div>
         <button
           type="button"
@@ -74,7 +82,7 @@ export const SiteHeader = () => {
           isOpen ? "visible max-h-96 opacity-100" : "invisible max-h-0 opacity-0"
         } flex flex-col gap-3 border-t border-white/10 bg-black/60 px-6 py-4 text-sm font-semibold text-muted-foreground transition-all duration-300`}
       >
-        {navItems.map((item) => (
+        {navigation.map((item) => (
           <a
             key={item.label}
             href={item.href}
@@ -85,20 +93,24 @@ export const SiteHeader = () => {
           </a>
         ))}
         <a
-          href="mailto:Tyleek.Jones.Dev@gmail.com"
+          href={`mailto:${profile.email}`}
           onClick={() => setIsOpen(false)}
           className="rounded-lg border border-primary/50 bg-primary/20 px-4 py-3 text-primary-foreground transition hover:bg-primary/30"
         >
           Let&apos;s Connect
         </a>
-        <a
-          href="https://www.linkedin.com"
-          target="_blank"
-          rel="noreferrer"
-          className="rounded-lg border border-white/10 px-4 py-3 text-muted-foreground transition hover:border-primary/50 hover:text-primary"
-        >
-          LinkedIn
-        </a>
+        {socialLinks.map((social) => (
+          <a
+            key={social.label}
+            href={social.href}
+            target="_blank"
+            rel="noreferrer"
+            onClick={() => setIsOpen(false)}
+            className="rounded-lg border border-white/10 px-4 py-3 text-muted-foreground transition hover:border-primary/50 hover:text-primary"
+          >
+            {social.label}
+          </a>
+        ))}
       </nav>
     </header>
   );
