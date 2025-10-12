@@ -3,7 +3,7 @@ import { ArrowUpRight, Layers } from "lucide-react";
 
 export const ProjectsSection = () => {
   return (
-    <section id="projects" className="border-t border-white/5 bg-white/3 py-24 backdrop-blur-sm">
+    <section id="projects" className="border-t border-white/5 bg-white/5 py-24 backdrop-blur-sm">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-14 px-6">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl space-y-4">
