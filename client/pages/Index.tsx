@@ -2,6 +2,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import CertificationsSection from "@/components/sections/CertificationsSection";
 import ContactSection from "@/components/sections/ContactSection";
 import ExperienceSection from "@/components/sections/ExperienceSection";
+import HeroSection from "@/components/sections/HeroSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
 import SkillsSection from "@/components/sections/SkillsSection";
 import { profile } from "@/data/profile";
@@ -39,23 +40,31 @@ export default function Index() {
     <div className="space-y-24 pb-24">
       <HeroSection />
       <section className="px-6">
-        <div className="mx-auto grid w-full max-w-6xl gap-6 md:grid-cols-2 xl:grid-cols-4">
-          {pillars.map(({ title, description, icon: Icon }) => (
-            <article
-              key={title}
-              className="group relative flex h-full flex-col gap-4 overflow-hidden rounded-3xl border border-white/10 bg-black/35 p-6 shadow-card transition-transform hover:-translate-y-1"
-            >
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-primary/30 bg-primary/10 text-primary">
-                <Icon className="h-6 w-6" />
-              </div>
-              <h3 className="text-xl font-semibold text-foreground">{title}</h3>
-              <p className="flex-1 text-sm text-muted-foreground/90">{description}</p>
-              <span className="text-xs uppercase tracking-[0.35em] text-muted-foreground/60">
-                {profile.name}
-              </span>
-              <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary/15 via-transparent to-secondary/15 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-            </article>
-          ))}
+        <div className="mx-auto max-w-6xl space-y-6">
+          <span className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-background/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.45em] text-muted-foreground">
+            printf "core pillars"
+          </span>
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            {pillars.map(({ title, description, icon: Icon }) => (
+              <article
+                key={title}
+                className="flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-[#180b28]/80 shadow-card backdrop-blur"
+              >
+                <div className="flex items-center gap-3 border-b border-white/10 px-5 py-4 text-xs uppercase tracking-[0.35em] text-muted-foreground">
+                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-primary/30 bg-primary/15 text-primary">
+                    <Icon className="h-5 w-5" />
+                  </span>
+                  <span className="text-foreground/80">{title.toLowerCase()}</span>
+                </div>
+                <div className="flex flex-1 flex-col gap-4 px-5 py-5">
+                  <p className="text-sm text-muted-foreground/90">{description}</p>
+                  <span className="mt-auto text-xs uppercase tracking-[0.35em] text-accent">
+                    {profile.name}
+                  </span>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
       <SkillsSection />
