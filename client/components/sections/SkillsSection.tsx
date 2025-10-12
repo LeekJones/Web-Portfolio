@@ -1,7 +1,5 @@
 import { profile } from "@/data/profile";
 
-import { profile } from "@/data/profile";
-
 const sectionSummaries = () => {
   const programming = profile.skills.find(
     (category) => category.title === "Programming & Automation",
