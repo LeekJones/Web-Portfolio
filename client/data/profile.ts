@@ -111,8 +111,6 @@ export const profile: Profile = {
         "JavaScript",
         "Bash",
         "PowerShell",
-        "Distributed system design",
-        "Object-oriented programming",
       ],
     },
     {
