@@ -105,9 +105,8 @@ export const SiteFooter = () => {
         </div>
       </div>
       <div className="border-t border-white/10 bg-background/95">
-        <div className="mx-auto flex w-full max-w-6xl flex-col gap-2 px-6 py-6 text-xs text-muted-foreground md:flex-row md:items-center md:justify-between">
-          <span className="text-balance">© {year} {profile.name}. uptime &gt;= 99.9%</span>
-          <span className="text-balance">crafted in purple terminal mode</span>
+        <div className="mx-auto flex w-full max-w-6xl px-6 py-6 text-xs text-muted-foreground">
+          <span className="text-balance">© {year} {profile.name}</span>
         </div>
       </div>
     </footer>
