@@ -71,7 +71,7 @@ export const profile: Profile = {
   ],
   links: {
     linkedin: "https://www.linkedin.com/in/tyleekjones",
-    github: "https://github.com/TyleekJones",
+    github: "https://github.com/LeekJones",
   },
   availability:
     "Open to DevOps, Cloud Engineering, and Site Reliability roles—including leadership or consulting engagements.",
