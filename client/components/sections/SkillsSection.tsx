@@ -78,11 +78,11 @@ export const SkillsSection = () => {
                 <span>{category.title.toLowerCase()}</span>
                 <span className="text-accent/70">module</span>
               </div>
-              <div className="flex flex-1 flex-wrap gap-2 px-6 py-6 text-xs font-medium uppercase tracking-[0.25em] text-muted-foreground/90">
+              <div className="flex flex-1 flex-wrap gap-1.5 px-6 py-5 text-xs font-medium uppercase tracking-[0.25em] text-muted-foreground/90">
                 {category.items.map((skill) => (
                   <span
                     key={skill}
-                    className="rounded-xl border border-white/10 bg-background/60 px-3 py-1 text-muted-foreground shadow-sm shadow-primary/10"
+                    className="rounded-xl border border-white/10 bg-background/60 px-2.5 py-1 text-muted-foreground shadow-sm shadow-primary/10"
                   >
                     {skill}
                   </span>
