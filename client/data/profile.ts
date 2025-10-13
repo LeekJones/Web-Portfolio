@@ -59,7 +59,8 @@ export const profile: Profile = {
   location: "Houston, Texas, USA",
   email: "Tyleek.Jones.Dev@gmail.com",
   phone: "832-792-5003",
-  headline: "Building resilient, observable edge-to-cloud platforms across Azure and multi-cloud ecosystems.",
+  headline:
+    "Building resilient, observable edge-to-cloud platforms across Azure and multi-cloud ecosystems.",
   summary:
     "Cloud engineer and SRE partner with a record of modernizing IoT telemetry platforms, accelerating deployment velocity, and delivering high-trust observability for hybrid infrastructures.",
   focusAreas: [
@@ -197,7 +198,14 @@ export const profile: Profile = {
         "Automated provisioning using Bicep, Helm, and Azure Arc-enabled Kubernetes to halve deployment time for hybrid edge-cloud environments.",
         "Implemented automated operational workflows via Azure DevOps pipelines, PowerShell, and Azure CLI reducing manual tasks by 30%.",
       ],
-      stack: ["Azure", "Bicep", "Helm", "Grafana", "Azure Monitor", "Azure DevOps"],
+      stack: [
+        "Azure",
+        "Bicep",
+        "Helm",
+        "Grafana",
+        "Azure Monitor",
+        "Azure DevOps",
+      ],
     },
     {
       company: "Intel Corporation",
@@ -212,7 +220,14 @@ export const profile: Profile = {
         "Created observability platform with Prometheus, Grafana, and custom telemetry APIs reducing infrastructure-related test failures by 40%.",
         "Engineered Python and PowerShell automation workflows to orchestrate lab provisioning, configuration, and health checks across distributed systems.",
       ],
-      stack: ["Terraform", "Ansible", "Prometheus", "Grafana", "Jenkins", "GitHub Actions"],
+      stack: [
+        "Terraform",
+        "Ansible",
+        "Prometheus",
+        "Grafana",
+        "Jenkins",
+        "GitHub Actions",
+      ],
     },
     {
       company: "Dualis TechWorks",
@@ -227,7 +242,14 @@ export const profile: Profile = {
         "Built end-to-end edge-to-cloud telemetry pipelines combining RabbitMQ, MQTT, and time-series databases for real-time monitoring.",
         "Created repeatable infrastructure-as-code templates using Terraform, Helm, and Ansible to support disaster recovery and hybrid cloud parity.",
       ],
-      stack: ["Kubernetes", "Istio", "ArgoCD", "Terraform", "OpenTelemetry", "RabbitMQ"],
+      stack: [
+        "Kubernetes",
+        "Istio",
+        "ArgoCD",
+        "Terraform",
+        "OpenTelemetry",
+        "RabbitMQ",
+      ],
     },
   ],
   projects: [
@@ -240,7 +262,13 @@ export const profile: Profile = {
         "Unified observability with Azure Monitor and Grafana",
         "Deployment automation through Bicep and Azure DevOps",
       ],
-      stack: ["Azure IoT Hub", "Event Grid", "Azure Functions", "Azure Monitor", "Grafana"],
+      stack: [
+        "Azure IoT Hub",
+        "Event Grid",
+        "Azure Functions",
+        "Azure Monitor",
+        "Grafana",
+      ],
       year: "2025",
     },
     {
@@ -270,7 +298,10 @@ export const profile: Profile = {
   ],
   certifications: [
     { title: "AZ-400 - Azure DevOps Engineer Expert", status: "In Progress" },
-    { title: "Certified Kubernetes Administrator (CKA)", status: "In Progress" },
+    {
+      title: "Certified Kubernetes Administrator (CKA)",
+      status: "In Progress",
+    },
     { title: "Docker Certified Associate (DCA)", status: "In Progress" },
     { title: "AWS Certified Cloud Practitioner", status: "In Progress" },
   ],

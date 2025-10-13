@@ -23,13 +23,15 @@ export const SiteFooter = () => {
           </div>
           <div className="grid gap-8 pt-6 md:grid-cols-[1.4fr,1fr,1fr]">
             <div className="space-y-4">
-              <p className="text-sm text-accent">{profile.name}@{profile.location}</p>
+              <p className="text-sm text-accent">
+                {profile.name}@{profile.location}
+              </p>
               <p className="text-balance text-base text-muted-foreground/90">
                 {profile.summary}
               </p>
               <div className="space-y-2 text-sm text-muted-foreground">
                 <div>
-                  <span className="text-accent/80">email</span>: {" "}
+                  <span className="text-accent/80">email</span>:{" "}
                   <a
                     href={`mailto:${profile.email}`}
                     className="break-words text-foreground transition hover:text-accent"
@@ -38,7 +40,7 @@ export const SiteFooter = () => {
                   </a>
                 </div>
                 <div>
-                  <span className="text-accent/80">phone</span>: {" "}
+                  <span className="text-accent/80">phone</span>:{" "}
                   <a
                     href={`tel:${phoneHref}`}
                     className="break-words text-foreground transition hover:text-accent"
@@ -98,15 +100,15 @@ export const SiteFooter = () => {
             </div>
           </div>
           <div className="mt-8 rounded-xl border border-white/10 bg-background/70 p-4 text-xs text-muted-foreground/80">
-            <p className="text-balance">
-              {profile.availability}
-            </p>
+            <p className="text-balance">{profile.availability}</p>
           </div>
         </div>
       </div>
       <div className="border-t border-white/10 bg-background/95">
         <div className="mx-auto flex w-full max-w-6xl px-6 py-6 text-xs text-muted-foreground">
-          <span className="text-balance">© {year} {profile.name}</span>
+          <span className="text-balance">
+            © {year} {profile.name}
+          </span>
         </div>
       </div>
     </footer>

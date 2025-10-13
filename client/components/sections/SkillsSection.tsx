@@ -15,7 +15,8 @@ const sectionSummaries = () => {
     {
       label: "Languages & Automation",
       value: programming ?? 0,
-      description: "Scripting languages, compiled systems, and automation workflows.",
+      description:
+        "Scripting languages, compiled systems, and automation workflows.",
     },
     {
       label: "Cloud & Platform Services",
@@ -44,8 +45,8 @@ export const SkillsSection = () => {
             Systems craftsmanship across code, infrastructure, and telemetry
           </h2>
           <p className="text-balance text-base text-muted-foreground sm:text-lg">
-            Each discipline is configured like a module—declarative, automated, and
-            observable end-to-end.
+            Each discipline is configured like a module—declarative, automated,
+            and observable end-to-end.
           </p>
         </div>
 
