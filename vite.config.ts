@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => ({
       deny: [".env", ".env.*", "*.{crt,pem}", "**/.git/**", "server/**"],
     },
   },
-  base: mode === "production" ? "/Web-Portfolio/" : "/",
+  base: "/",
   build: {
     outDir: "dist/spa",
   },
